@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 2px solid #333;
+    user-select: none; /* Evita a seleção de texto */
+}
+
+.cell.x {
+    color: blue;
+}
+
+.cell.circle {
+    color: red;
+}
+
+.cell:hover {
+    background-color: #f9f9f9;
+}
+
+.message {
+    display: none;
+    margin-top: 20px;
+}
+
+#winningMessage.show {
+    display: block;
+}
